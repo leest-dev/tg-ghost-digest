@@ -219,7 +219,13 @@ body {
 .post-template .gh-article-header,
 .page-template .gh-head,
 .page-template .gh-article-header {
-    background-color: var(--color-lighter-gray);
+    /* padding-top: 24px !important; */
+    /* background-color: var(--color-lighter-gray); */
+}
+
+.gh-article-header {
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
 }
 
 body:not(.home-template) .gh-article-header {

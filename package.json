@@ -1,6 +1,6 @@
 {
-    "name": "digest",
-    "description": "A Ghost theme",
+    "name": "tg-theme",
+    "description": "Tome Genius Newsletter theme (based on digest).",
     "version": "1.0.0",
     "private": true,
     "engines": {
@@ -8,9 +8,9 @@
     },
     "license": "MIT",
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Tome Genius",
+        "email": "hello@tomegenius.com",
+        "url": "https://www.tomegenius.com"
     },
     "keywords": [
         "ghost",
@@ -45,7 +45,7 @@
             "navigation_layout": {
                 "type": "select",
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],
-                "default": "Logo on the left"
+                "default": "Logo in the middle"
             },
             "title_font": {
                 "type": "select",
