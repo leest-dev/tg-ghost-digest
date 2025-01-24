@@ -2,13 +2,23 @@
 @import "fonts.css";
 
 :root {
-    --font-sans: Raleway, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-sans: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-serif: "PT Serif", Times, serif;
-    --h1-size: 4.8rem;
+    --h1-size: 4.15rem;
+    --ghost-accent-color:  #E4005D !important; /* TG Pink */
 }
 
 body {
     font-feature-settings: "lnum";
+}
+
+.gh-head {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.gh-site .gh-main {
+    padding-top: 24px !important;
 }
 
 .post-template .gh-main,
