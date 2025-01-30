@@ -147,8 +147,8 @@ body {
 
 .gh-subscribe {
     padding: 6rem 2.4rem;
-    margin-top: 8rem;
-    margin-bottom: 4rem;
+    /* margin-top: 8rem; */
+    /* margin-bottom: 4rem; */
     text-align: center;
     background: linear-gradient(315deg, #efefef, #fafafa);
     border-radius: 8px;

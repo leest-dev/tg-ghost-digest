@@ -13,9 +13,9 @@
 <body class="{{body_class}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{plural pagination.pages empty="" singular=" no-pagination" plural=""}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
 <div class="gh-site">
     <div class="gh-canvas">
-            {{#if @site.logo}}
-             <a href="https://www.tomegenius.com"><img src="{{@site.logo}}" alt="{{@site.title}}" style="width: 192px; margin-top: 24px; margin-bottom: 24px;"></a>
-            {{/if}}         
+            {{!-- {{#if @site.logo}} --}}
+             <a href="https://www.tomegenius.com"><img src="{{asset "images/tg-logo.svg"}}" alt="Tome Genius Logo" style="width: 192px; margin-top: 32px; margin-bottom: 24px;"></a>
+            {{!-- {{/if}}          --}}
         </div>
     <header id="gh-head" class="gh-head gh-outer">
       
@@ -37,7 +37,7 @@
             </div>
 
             <nav class="gh-head-menu">
-                {{navigation}}
+                {{!-- {{navigation}} --}}
                 {{#unless @site.members_enabled}}
                     {{#match @custom.navigation_layout "Stacked"}}
                         {{!-- <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button> --}}
@@ -75,15 +75,15 @@
     {{#unless @member}}
         <div class="gh-subscribe-wrapper gh-canvas">
             <section class="gh-subscribe">
-                <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
+            <h3 class="gh-subscribe-title">{{t "Subscribe to {publication}" publication=@site.title}}</h3>
 
-                <div class="gh-subscribe-description">Get new tomes every two weeks—delivered to your inbox. Sign up now!
+            <div class="gh-subscribe-description">{{t "Get four new tomes every week—delivered to your inbox. Sign up now!"}}</div>
 
                 <a class="gh-subscribe-input u-hover" href="#/portal/signup" data-portal="signup">
-                    Jamie Larson
+                    {{t "Lillian Baxter"}}
                     <div class="gh-subscribe-input-btn">
                         <div class="u-hover-inner">
-                            Subscribe
+                            {{t "Subscribe"}}
                             <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
                             <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
                         </div>
@@ -99,13 +99,15 @@
             {{!-- <div class="gh-copyright">
                 {{@site.title}} © {{date format="YYYY"}}
             </div> --}}
-            {{#if @site.secondary_navigation}}
+            {{!-- {{#if @site.secondary_navigation}}
                 <nav class="gh-foot-menu">
                     {{navigation type="secondary"}}
                 </nav>
-            {{/if}}
+            {{/if}} --}}
             <div class="gh-powered-by" style="text-align: center;">
-                made with AI <br/>by <a href="https://www.tomegenius.com" target="_blank" rel="noopener">Tome Genius</a>
+                {{t "made with AI"}}
+                <br/>
+                {{{t "by {tomegenius}" tomegenius="<a href='https://www.tomegenius.com' target='_blank' rel='noopener'>Tome Genius</a>"}}}
             </div>
         </div>
     </footer>
